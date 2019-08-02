@@ -4,7 +4,7 @@ Tool to check our javascript
 - console.log("insert variable here")
 Note: User never sees this, only a developers tool
 
-VARIABLE: defining an idea or wuantity for the computer for it tyo remember
+VARIABLE: defining an idea or quantity for the computer for it tyo remember
 
   *camelCase -- first word is lower case, first letter of second word is capitalized
 
@@ -96,4 +96,19 @@ if(userNumber > 7){
 }
 else {
   container.append(`<p>Sorry, Not Sorry!</p>`)
+}
+
+HOW TO CHOOSE RANDOM item
+
+function showDare() {
+  //1) Random Number between 0 and 1
+  var randomNum = Math.random();
+  //2) Make Number Largerr --> multiply random number by length of array
+  var multArrLength = randomNum * arrayTruth.length;
+  //3) Round number down to fit in array
+  var round = Math.floor(multArrLength);
+  //4) Picks random index number from array and assigns it as variable "showNum"
+  var showNum = arrayTruth[round];
+  //5) Append (throw) item .truthContainer on our html page. Use interpolation ${variablename} AND backticks
+  truthContainer.append(`<h2>${showNum}</h2>`);
 }
